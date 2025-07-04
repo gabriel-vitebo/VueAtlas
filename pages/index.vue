@@ -19,23 +19,25 @@ function generateTree() {
 </script>
 
 <template>
-  <div class="p-4">
-    <h1 class="text-xl font-bold mb-2">
+  <div class="p-4 bg-gray-900 w-full max-w-7xl mx-auto">
+    <h1 class="text-xl font-bold mb-2 text-violet-200">
       Gerador de Mapa Vue
     </h1>
 
-    <textarea 
-      v-model="inputCode" 
-      label="Código Vue"
-      rows="10" 
-      class="w-full border p-2 mb-4" 
+    <UTextarea 
+      v-model="inputCode"
+      :rows="12"
+      color="neutral"
+      placeholder="Cole o código Vue aqui..."
+      class="text-white "
     />
-    <button 
-      @click="generateTree" 
-      class="bg-blue-600 text-white px-4 py-2 rounded"
-    >
-      Gerar Mapa
-    </button>
+
+    <UButton 
+      label="Gerar Mapa" 
+      @click="generateTree"
+      color="secondary" 
+      variant="soft"
+    />
 
     <div 
       class="mt-6 h-[600px]" 

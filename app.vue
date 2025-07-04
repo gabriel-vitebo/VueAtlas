@@ -2,7 +2,7 @@
 import '@vue-flow/core/dist/style.css'
 </script>
 <template>
-  <div>
+  <UApp>
      <NuxtPage />
-  </div>
+  </UApp>
 </template>
